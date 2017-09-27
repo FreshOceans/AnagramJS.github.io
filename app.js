@@ -19,6 +19,6 @@ app.controller('mainController', function($scope) {
             }).join('');
 
             return finalPhrase
-        };
+        }
     };
 });
