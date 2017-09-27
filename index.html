@@ -3,37 +3,65 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>FIAngularJS</title>
+        <title>FIAnagramJS</title>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        <!-- CSS Style -->
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Dosis|Indie+Flower" rel="stylesheet">        <!-- Main CSS -->
         <link rel="stylesheet" href="style.css">
     </head>
     <body ng-app= "app">
 
-        <div ng-controller = "mainController" >
-            <h2>{{main.title}}</h2>
-
-            <!-- AngularJS Model & Bind Example -->
-            <!-- <p>Enter your future anagram: <input type = "text" ng-model = "phrase"></p>
-            <p>Boom: <span ng-bind = "phrase"></span>!</p> -->
-
-            Enter Phrase: <input type = "text" ng-model = "phrase.firstPhrase"><br><br>
-            <br>
-            Anagram Reward: {{phrase.fullAnagram()}}
-
-            <!-- New Anagram Button -->
-            <button type="button" ng-click="reloadRoute()" class="btn btn-primary btn-large" data-translate>New</button>
-
-            <!-- Anagram Display Clear Button -->
-            <button type="button" class="btn btn-primary btn-large" data-ng-click="phrase.firstPhrase = '' ">Clear</button>
-
+        <!-- Main Controller for SPA -->
+        <div class="container-fluid bg-dark text-white" style="height:700px" ng-controller = "mainController" >
+                <!-- App Title -->
+                <h2 class="display-2 title-container text-center">{{main.title}}</h2>
+            <div class="row">
+                <div class="container-fluid phrase-container text-center">
+                    <!-- User Phrase Input -->
+                    <input type = "text" ng-model = "phrase.firstPhrase" placeholder="Please enter phrase"><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container-fluid anagram-container text-center">
+                    <!-- Final anagram -->
+                    Anagram: {{phrase.fullAnagram()}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="container-fluid button-container text-center">
+                    <!-- Anagram "Reroll" Button -->
+                    <button type="button" ng-click="reloadRoute()" class="btn btn-primary btn-large" data-translate>Reroll</button>
+                    <!-- Anagram "Clear" Button -->
+                    <button type="button" class="btn btn-primary btn-large" data-ng-click="phrase.firstPhrase = '' ">Clear</button>
+                </div>
+            </div>
         </div>
+
+        <!-- ===== Footer ===== -->
+        <footer>
+            <div class="container-fluid bg-dark text-white">
+                <div class="row">
+                    <div class="container-fluid text-center">
+                        <ul class="list-inline social-links">
+                            <li class="list-inline-item social-link"><a href="https://github.com/FreshOceans/AnagramJS.github.io">Github</a></li>
+                            <li class="list-inline-item social-link"><a href="https://linkedin.com/in/mperez03">LinkedIn</a></li>
+                            <li class="list-inline-item social-link"><a href="mailto:freshoceans@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                    <div class="container-fluid text-center">
+                        <p>© 2017 by Michael Perez</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     </body>
 </html>
