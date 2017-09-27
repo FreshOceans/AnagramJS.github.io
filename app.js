@@ -11,14 +11,18 @@ app.controller('mainController', function($scope) {
 
     // Anagram Creation
     $scope.phrase = {
-        firstPhrase: "AngularJS",
+        firstPhrase: "",
         fullAnagram: function() {
-            var finalPhrase = [];
+            var finalPhrase;
             finalPhrase = this.firstPhrase.split('').sort(function() {
                 return 0.5 - Math.random()
             }).join('');
 
             return finalPhrase
+
+            // Issue with infinte digest loop lies inside $scope.phrase.fullAnagram's return value.
+            // Create a if condition to solve or divide finalPhrase functions
+            // Ex: $scope.random = function() {return 0.5 - Math.random();};
         }
     };
 });

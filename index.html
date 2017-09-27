@@ -4,28 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>FIAnagramJS</title>
-        <!-- Bootstrap -->
+        <!-- === Bootstrap === -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        <!-- Google Fonts -->
+        <!-- === Google Fonts === -->
         <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-        <!-- Main CSS -->
+        <!-- === Main CSS === -->
         <link rel="stylesheet" href="style.css">
     </head>
     <body ng-app= "app">
 
-        <!-- Main Controller for SPA -->
+        <!-- == Main Controller for SPA == -->
         <div class="container-fluid bg-dark text-white" style="height:700px" ng-controller = "mainController" >
-                <!-- App Title -->
+                <!-- == App Title == -->
                 <h2 class="display-2 title-container text-center">{{main.title}}</h2>
             <div class="row">
                 <div class="container-fluid phrase-container text-center">
-                    <!-- User Phrase Input -->
+                    <!-- == User Phrase Input == -->
                     <input type = "text" ng-model = "phrase.firstPhrase" placeholder="Please enter phrase"><br><br>
                 </div>
             </div>
             <div class="row">
                 <div class="container-fluid anagram-container text-center">
-                    <!-- Final anagram -->
+                    <!-- == Final anagram ==  -->
                     Anagram: {{phrase.fullAnagram()}}
                 </div>
             </div>
@@ -58,7 +58,7 @@
         </footer>
 
 
-    <!-- Scripts -->
+    <!-- ===== Scripts ===== -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
