@@ -1,12 +1,12 @@
-#**AnagramJS Process**
+# **AnagramJS Process**
 
 
-###**The beginning**
+### **The beginning**
 After spending a couple of hours learning about AngularJS with the official documentation to youtube to free online tutorials, I discovered how my experience with Ruby on Rails helped me understand how AngularJS functions as a MVC. At that point I knew what I wanted to do with the App I just needed to learn and adapt the syntax for AngularJS. Stackoverflow would be my greatest ally along with the official documentation for deeper logic.
 
 
 
-###**AngularJS**
+### **AngularJS**
 I was glad this project involved AngularJS because it was next on my list to learn and create a meaningful project. This was a crash course on it and I was interested in the challenge.
 I broke down the app requirements (MVP) in order to better understand the goal:
     1. String from an input on the screen.
@@ -34,5 +34,5 @@ I originally had used npm to install a AngularJS project through its website ins
 
 
 
-###**CSS Style**
+### **CSS Style**
 I knew from the beginning I was going to use bootstrap4 because it is new technology I want to improve with as well as quick easy styling for a MVP in a short time period. The bootstrap system would allow me to focus on the new framework I needed to quickly learn and implement. I know I wanted a clean & simple design to allow the user to quickly understand the app in order for them to use it effectively.
