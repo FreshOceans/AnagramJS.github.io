@@ -26,6 +26,7 @@ After some time I was able to get the basic requirement done, but a new issue wa
 > *Error: $rootScope:infdig
 > Infinite $digest Loop*
 
+In order for me to stay organized I created an issue for the project with the link to the official documentation problem as well as short description. 
 This would be the last issue for me to resolve.
 
 
