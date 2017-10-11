@@ -15,23 +15,17 @@ I broke down the app requirements (MVP) in order to better understand the goal:
 3. A "reroll" button (to change the current anagram).
 4. Add Clear Button (just makes sense to add).
 
-The AngularJS (AJS) 2-way data binding was simple and easy to integrate with ng-model linked to ng-bind with instant onscreen update.
-The issue I ran into was how to apply a function to the ng-model in order for the ng-bind to be different.
-For instance:
-> ng-model="javascript" -> ng-bind="tpircsavaj"
-
-The arrow represents the function in which the ng-model's string is split then sorted by random and then joined back together.
+The AngularJS (AJS): Data-binding
 
 I set a timebox to find a solution to my problem, but I just ended up just tackling this issue logically on my own. I knew each individual part because I had used it before, I just needed to piece them together in AngularJS.
-After some time I was able to get the basic requirement done, but a new issue was created:
+After some time I was able to get the basics done, but a new issue was created:
 > *Error: $rootScope:infdig
 > Infinite $digest Loop*
 
 In order for me to stay organized I created an issue for the project with the link to the official documentation problem as well as short description.
 This would be the last issue for me to resolve.
-After research I concluded that a possible way to solve this issue would be to write a (if) condition for *$scope.phrase*
 
-Given more time I would try that method.
+After a break, and then some research on Stackoverflow I found the answer. I created a watch conditional for the data-bind to handle the randomizing. I was partly right in that I needed an if/else statement, but what I learned was that I also needed a watch for the variable.
 
 I originally had used npm to install a AngularJS project through its website instructions, but after some time was not ready to use components nor did I think it was necessary for this simple project. I decided to go back to basics with:
 * index.html
