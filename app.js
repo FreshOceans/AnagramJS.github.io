@@ -10,7 +10,7 @@ app.controller('mainController', function($scope) {
     };
 
     // Anagram Creation
-    $scope.$watch('initialPhrase', (newVal, oldVal) => {
+    $scope.$watch('initalPhrase', (newVal, oldVal) => {
     if (newVal) {
       // set anagram to randomize
       $scope.anagram = newVal.split('').sort(function() {
