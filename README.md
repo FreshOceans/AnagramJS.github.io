@@ -27,6 +27,8 @@ This would be the last issue for me to resolve.
 
 After a break, and then some research on Stackoverflow I found the answer. I created a watch conditional for the data-bind to handle the randomizing. I was partly right in that I needed an if/else statement, but what I learned was that I also needed a watch for the variable.
 
+After a couple days away from this project, I came back after learning new ideas in AngularJS and tackled this problem a different way, I redid the entire js file and it works perfectly now. Clean, concise, and coherent.
+
 I originally had used npm to install a AngularJS project through its website instructions, but after some time was not ready to use components nor did I think it was necessary for this simple project. I decided to go back to basics with:
 * index.html
 * app.js
