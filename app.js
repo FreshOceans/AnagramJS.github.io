@@ -1,8 +1,7 @@
 var app = angular.module("app", []);
 
 app.controller('mainCtrl', function($scope){
-    $scope.main = {};
-    $scope.main.title = "AnagramJS";
+    $scope.title = "AnagramJS";
     $scope.reroll = function reroll(value){
       // set anagram to randomize
           $scope.anagram = value.split('').sort(function() {
