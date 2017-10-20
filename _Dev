@@ -1,0 +1,30 @@
+<div class="spa" ng-app="app">
+    <!-- == Main Controller for SPA == -->
+    <div class="container-fluid bg-dark text-white" style="height:700px" ng-controller="mainCtrl">
+            <!-- == App Title == -->
+            <h2 class="display-2 title-container text-center">AnagramJS</h2>
+        <div class="row">
+            <div class="container-fluid phrase-container text-center">
+                <!-- == User Phrase Input == -->
+                <input type = "text" ng-model="phrase" placeholder="Please enter phrase"><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid anagram-container text-center">
+                <!-- == Final anagram ==  -->
+                Anagram:
+                <p>
+                    {{anagram}}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid button-container text-center">
+                <!-- Anagram "Reroll" Button -->
+                <button type="button" ng-click="reroll(phrase)" class="btn btn-primary btn-large">Reroll</button>
+                <!-- Anagram "Clear" Button -->
+                <button type="button" class="btn btn-primary btn-large" data-ng-click="phrase = '' ">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>

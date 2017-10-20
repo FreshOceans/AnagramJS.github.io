@@ -14,13 +14,13 @@
     <body ng-app= "app">
 
         <!-- == Main Controller for SPA == -->
-        <div class="container-fluid bg-dark text-white" style="height:700px" ng-controller = "mainController" >
+        <div class="container-fluid bg-dark text-white" style="height:700px" ng-controller="mainCtrl" >
                 <!-- == App Title == -->
                 <h2 class="display-2 title-container text-center">{{main.title}}</h2>
             <div class="row">
-                <div class="container-fluid phrase-container text-center">
+                <div class="container-fluid word-container text-center">
                     <!-- == User Phrase Input == -->
-                    <input type = "text" ng-model = "initalPhrase" placeholder="Please enter phrase"><br><br>
+                    <input type="text" ng-model="word" placeholder="Please enter word"><br><br>
                 </div>
             </div>
             <div class="row">
@@ -32,9 +32,9 @@
             <div class="row">
                 <div class="container-fluid button-container text-center">
                     <!-- Anagram "Reroll" Button -->
-                    <button type="button" ng-click="reloadRoute()" class="btn btn-primary btn-large" data-translate>Reroll</button>
+                    <button type="button" ng-click="reroll(word)" class="btn btn-primary btn-large">Reroll</button>
                     <!-- Anagram "Clear" Button -->
-                    <button type="button" class="btn btn-primary btn-large" data-ng-click="phrase.firstPhrase = '' ">Clear</button>
+                    <button type="button" class="btn btn-primary btn-large" ng-click="word=''">Clear</button>
                 </div>
             </div>
         </div>
@@ -59,9 +59,10 @@
 
 
     <!-- ===== Scripts ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     </body>

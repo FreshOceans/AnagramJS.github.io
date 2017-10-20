@@ -1,25 +1,20 @@
 var app = angular.module("app", []);
 
-app.controller('mainController', function($scope) {
+app.controller('mainCtrl', function($scope){
     $scope.main = {};
     $scope.main.title = "AnagramJS";
-
-    // Refresh Page acts as reroll button
-    $scope.reloadRoute = function() {
-        $route.reload();
-    };
-
-    // Anagram Creation
-    $scope.$watch('initalPhrase', (newVal, oldVal) => {
-    if (newVal) {
+    $scope.reroll = function reroll(value){
       // set anagram to randomize
-      $scope.anagram = newVal.split('').sort(function() {
-        return 0.5 - Math.random()
-      }).join('');
-    } else {
-      // empty anagram if word is empty
-      $scope.anagram = "";
-    }
+          $scope.anagram = value.split('').sort(function() {
+            return 0.5 - Math.random()
+          }).join('');
+    };
+    $scope.$watch('word', (newVal, oldVal) => {
+        if (newVal) {
+            $scope.reroll(newVal);
+        } else {
+            // empty anagram if word is empty
+            $scope.anagram = "";
+        }
     });
-
 });
